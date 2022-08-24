@@ -15,3 +15,4 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+mix.sass('public/assets/scss/soft-ui-dashboard.scss', 'public/assets/css');
