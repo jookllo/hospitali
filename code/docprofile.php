@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Accountant</title>
+    <title>Doctor Consultancy</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,9 +33,9 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
             <div class="sidebar-brand-icon ">
-                <i class="fas fa-prescription-bottle-alt"></i>
+                <i class="fas fa-stethoscope"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Pharmacy</div>
+            <div class="sidebar-brand-text mx-3">Consultation</div>
         </a>
 
         <!-- Divider -->
@@ -50,12 +50,21 @@
             Dashboard
         </div>
 
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="docprofile.php">
+                <i class="fas fa-fw fa-person-booth"></i>
+                <span>Doctor Profile</span></a>
+        </li>
+
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="pharmacy.php">
-                <i class="fas fa-fw fa-tablets"></i>
-                <span>Pharmacy</span></a>
+            <a class="nav-link" href="doctor.php">
+                <i class="fas fa-fw fa-book-medical"></i>
+                <span>Patient Consultation</span></a>
         </li>
+
 
 
         <!-- Divider -->
@@ -125,6 +134,48 @@
                     </li>
 
 
+                    <!-- Dropdown - Alerts -->
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                         aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">
+                            Alerts Center
+                        </h6>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="mr-3">
+                                <div class="icon-circle bg-primary">
+                                    <i class="fas fa-file-alt text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="small text-gray-500">December 12, 2019</div>
+                                <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="mr-3">
+                                <div class="icon-circle bg-success">
+                                    <i class="fas fa-donate text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="small text-gray-500">December 7, 2019</div>
+                                $290.29 has been deposited into your account!
+                            </div>
+                        </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                            <div class="mr-3">
+                                <div class="icon-circle bg-warning">
+                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="small text-gray-500">December 2, 2019</div>
+                                Spending Alert: We've noticed unusually high spending for your account.
+                            </div>
+                        </a>
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                    </div>
+                    </li>
 
                     <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -155,7 +206,7 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Pharmacy</h1>
+                <h1 class="h3 mb-4 text-gray-800">Doctor Profile</h1>
 
 
             </div>
