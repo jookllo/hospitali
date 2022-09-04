@@ -164,7 +164,21 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">Patient Consultation</h1>
+                <div class="container">
+                    <form action="" >
+                        <div class="form-group">
+                            <textarea class="form-control col-lg-10" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br/>
+                            <textarea class="form-control col-lg-10" name="pdiagnosis" placeholder="Diagnosis" required></textarea><br/>
+                            <textarea class="form-control col-lg-10" name="pmeds" placeholder="Recommended way Forward" required></textarea><br/>
+                            <p>Patient Next Visit:</p>
+                            <input type="date" class="form-control col-lg-5" name="pdate" placeholder="Next Visit" required/><br/>
+                            <button type="submit" class="btn btn-facebook">Submit</button>
+                            <button name="labsend" class="btn btn-success">Send to Laboratory</button>
+                        </div>
+                    </form>
 
+
+                </div>
 
             </div>
             <!-- /.container-fluid -->
