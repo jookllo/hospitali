@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Accountant</title>
+    <title>Triage</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -89,7 +89,7 @@
                 <form
                     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient"
                                aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
@@ -114,7 +114,7 @@
                             <form class="form-inline mr-auto w-100 navbar-search">
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search for..." aria-label="Search"
+                                           placeholder="Search for Patient" aria-label="Search"
                                            aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <button class="btn btn-primary" type="button">
@@ -156,8 +156,19 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Patient General Details</h1>
-
+                <h1 class="h3 mb-4 text-gray-800">Patient General Checkup</h1>
+                <div class="card-body">
+                    <form action="" >
+                        <div class="form-group">
+                        <input type="number" class="form-control col-lg-6" name="pweight" placeholder="Input Patient Weight" required/><br/>
+                        <input type="number" class="form-control col-lg-6" name="pheight" placeholder="Input Patient Height" required/><br/>
+                        <input type="text" class="form-control col-lg-6" name="bloodpressure" placeholder="Input Blood Pressure" required/><br/>
+                        <input type="number" class="form-control col-lg-6" name="temperature" placeholder="Input Patient Temperature" required/><br/>
+                        <button type="submit" class="btn btn-facebook">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit to Doctor</button>
+                        </div>
+                    </form>
+                </div>
 
             </div>
             <!-- /.container-fluid -->

@@ -87,7 +87,7 @@
                 <form
                     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient"
                                aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
@@ -112,7 +112,7 @@
                             <form class="form-inline mr-auto w-100 navbar-search">
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search for..." aria-label="Search"
+                                           placeholder="Search for Patient" aria-label="Search"
                                            aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <button class="btn btn-primary" type="button">
@@ -153,10 +153,51 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
+
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">Reception</h1>
-                <h2 class="h3 mb-5 text-gray-700">Admit Patient</h2>
+                <h1 class="h3 mb-4 text-gray-600">Patient Details</h1>
+                <div class="container">
+                    <form action="" >
+                        <div class="form-group">
+                            <input type="text" class="form-control col-lg-6" name="pname" placeholder="Input First Name" required/><br/>
+                            <input type="text" class="form-control col-lg-6" name="lname" placeholder="Input Last Name" required/><br/>
+                            <input type="text" class="form-control col-lg-6" name="insurancenum" placeholder="Input Insurance Number" required/><br/>
+                            <input type="number" class="form-control col-lg-6" name="phnum" placeholder="Input Phone Number" required/><br/>
+                            <button type="submit" class="btn btn-facebook">Submit</button>
+                            <button name="triagesend" class="btn btn-success">Send to Triage</button>
+                        </div>
+                    </form>
 
+
+                </div>
+
+                <h2 class="h3 mb-5 text-gray-700">Check Patient</h2>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td>
+
+                        </td>
+
+                        <td>
+                            <button type="button" class="btn btn-success">Triage</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- /.container-fluid -->
