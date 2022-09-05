@@ -87,7 +87,7 @@
                 <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient"
                                aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
@@ -112,7 +112,7 @@
                             <form class="form-inline mr-auto w-100 navbar-search">
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search for..." aria-label="Search"
+                                           placeholder="Search for Patient" aria-label="Search"
                                            aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <button class="btn btn-primary" type="button">
@@ -157,6 +157,23 @@
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">Laboratory Testing</h1>
 
+                <div class="container">
+                    <form action="" >
+                        <div class="form-group">
+                            <h5>Patient Name:</h5>
+                            <h5>Patient Phone Number:</h5>
+                            <input type="text" class="form-control col-lg-7" name="bloodtest" placeholder="Input Red Blood Cell Count" required/><br/>
+                            <input type="text" class="form-control col-lg-7" name="urinetest" placeholder="Input Urine Test Details" required/><br/>
+                            <input type="text" class="form-control col-lg-7" name="cholestraltest" placeholder="Input Cholestral Level" required/><br/>
+                            <input type="number" class="form-control col-lg-7" name="phnum" placeholder="Input Phone Number" required/><br/>
+                            <p>Lab Result Comments:</p>
+                            <textarea class="form-control col-7" placeholder="Comments on patient test"></textarea><br/>
+                            <button name="docsend" class="btn btn-success">Submit & Send to Doctor</button>
+                        </div>
+                    </form>
+
+
+                </div>
 
             </div>
             <!-- /.container-fluid -->

@@ -81,6 +81,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+<<<<<<< HEAD
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -90,16 +91,86 @@
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
+=======
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient"
+                               aria-label="Search" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+>>>>>>> 17da15e6d12436a6be40099ad59c6c441aa26ebc
                         </div>
                     </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
+<<<<<<< HEAD
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
+=======
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for Patient" aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Profile</span>
+                            <img class="img-profile rounded-circle"
+                                 src="../img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+>>>>>>> 17da15e6d12436a6be40099ad59c6c441aa26ebc
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
@@ -134,6 +205,7 @@
                             </div>
                         </li>
 
+<<<<<<< HEAD
                     </ul>
 
                 </nav>
@@ -149,7 +221,53 @@
 
                 </div>
                 <!-- /.container-fluid -->
+=======
 
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Reception</h1>
+                <h1 class="h3 mb-4 text-gray-600">Patient Details</h1>
+                <div class="container">
+                    <form action="" >
+                        <div class="form-group">
+                            <input type="text" class="form-control col-lg-6" name="pname" placeholder="Input First Name" required/><br/>
+                            <input type="text" class="form-control col-lg-6" name="lname" placeholder="Input Last Name" required/><br/>
+                            <input type="text" class="form-control col-lg-6" name="insurancenum" placeholder="Input Insurance Number" required/><br/>
+                            <input type="number" class="form-control col-lg-6" name="phnum" placeholder="Input Phone Number" required/><br/>
+                            <button type="submit" class="btn btn-facebook">Submit</button>
+                            <button name="triagesend" class="btn btn-success">Send to Triage</button>
+                        </div>
+                    </form>
+>>>>>>> 17da15e6d12436a6be40099ad59c6c441aa26ebc
+
+
+                </div>
+
+                <h2 class="h3 mb-5 text-gray-700">Check Patient</h2>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td>
+
+                        </td>
+
+                        <td>
+                            <button type="button" class="btn btn-success">Triage</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- End of Main Content -->
