@@ -86,18 +86,7 @@
                 </button>
 
                 <!-- Topbar Search -->
-                <form
-                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient"
-                               aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -158,21 +147,81 @@
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">Patient General Checkup</h1>
                 <div class="card-body">
-                    <form action="" >
-                        <div class="form-group">
-                        <input type="number" class="form-control col-lg-6" name="pweight" placeholder="Input Patient Weight" required/><br/>
-                        <input type="number" class="form-control col-lg-6" name="pheight" placeholder="Input Patient Height" required/><br/>
-                        <input type="text" class="form-control col-lg-6" name="bloodpressure" placeholder="Input Blood Pressure" required/><br/>
-                        <input type="number" class="form-control col-lg-6" name="temperature" placeholder="Input Patient Temperature" required/><br/>
-                        <button type="submit" class="btn btn-facebook">Submit</button>
-                        <button type="submit" class="btn btn-success">Submit to Doctor</button>
+
+                    <form class="d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search col-lg-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-gray-200 border-0 " placeholder="Search for Patient"
+                                   aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
                         </div>
                     </form>
+                    <hr/>
+                    <h1 class="h3 mb-4 text-gray-600">Patient Checkup List</h1>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Phone Number</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Enter Details
+                                </button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
             <!-- /.container-fluid -->
 
+            <!-- Modal Ndio Hii Hapa-->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Patient Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" >
+                                <div class="form-group">
+                                    <input type="number" class="form-control col-lg-10" name="pweight" placeholder="Patient Weight" required/><br/>
+                                    <input type="number" class="form-control col-lg-10" name="pheight" placeholder="Patient Height" required/><br/>
+                                    <input type="text" class="form-control col-lg-10" name="bloodpressure" placeholder="Blood Pressure" required/><br/>
+                                    <input type="number" class="form-control col-lg-10" name="temperature" placeholder="Patient Temperature" required/><br/>
+                                    <p>Select Doctor:</p>
+                                    <select class="form-control col-lg-10" name="doctors" id="doctors">
+                                        <option value="smith">Smith</option>
+                                        <option value="james">James</option>
+                                        <option value="martin">Martin</option>
+                                        <option value="paul">Paul</option>
+                                    </select><br/>
+                                    <button type="submit" class="btn btn-success">Submit to Doctor</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Inaisha Hapa-->
         </div>
         <!-- End of Main Content -->
 
