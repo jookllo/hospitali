@@ -147,14 +147,14 @@
                     <h1 class="h3 mb-4 text-gray-800">Reception</h1>
                     <h1 class="h3 mb-4 text-gray-600">Patient Details</h1>
                     <div class="container">
-                        <form action="">
+                        <form action="addtotriage.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control col-lg-6" name="pname" placeholder="Input First Name" required /><br />
                                 <input type="text" class="form-control col-lg-6" name="lname" placeholder="Input Last Name" required /><br />
                                 <input type="text" class="form-control col-lg-6" name="insurancenum" placeholder="Input Insurance Number" required /><br />
                                 <input type="number" class="form-control col-lg-6" name="phnum" placeholder="Input Phone Number" required /><br />
                                 <button type="submit" class="btn btn-facebook">Submit</button>
-                                <button name="triagesend" class="btn btn-success">Send to Triage</button>
+                                <button name="triagesend" type="Submit" class="btn btn-success">Send to Triage</button>
                             </div>
                         </form>
 
