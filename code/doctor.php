@@ -198,7 +198,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title " id="exampleModalLabel">Patient Consultation</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -214,8 +214,9 @@
                                             <textarea class="form-control col-lg-12" name="pmeds" placeholder="Prescription" required></textarea><br/>
                                             <p>Patient Next Visit:</p>
                                             <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required/><br/>
-                                            <button type="submit" class="btn btn-facebook">Submit</button>
-                                            <button name="labsend" class="btn btn-success">Send to Laboratory</button>
+                                            <button type="pharmsend" class="btn btn-facebook">Send to Pharmacy</button>
+                                            <button name="labsend" class="btn btn-success">Send to Lab</button>
+                                            <button name="billsend" class="btn btn-primary">Send to Billing</button>
                                         </div>
                                     </form>
                                 </div>
