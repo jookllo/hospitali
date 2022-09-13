@@ -71,9 +71,7 @@
         <hr class="sidebar-divider d-none d-md-block">
 
         <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+
 
     </ul>
     <!-- End of Sidebar -->
@@ -163,20 +161,68 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Patient Consultation</h1>
-                <div class="container">
-                    <form action="" >
-                        <div class="form-group">
-                            <textarea class="form-control col-lg-10" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br/>
-                            <textarea class="form-control col-lg-10" name="pdiagnosis" placeholder="Diagnosis" required></textarea><br/>
-                            <textarea class="form-control col-lg-10" name="pmeds" placeholder="Recommended way Forward" required></textarea><br/>
-                            <p>Patient Next Visit:</p>
-                            <input type="date" class="form-control col-lg-5" name="pdate" placeholder="Next Visit" required/><br/>
-                            <button type="submit" class="btn btn-facebook">Submit</button>
-                            <button name="labsend" class="btn btn-success">Send to Laboratory</button>
-                        </div>
-                    </form>
+                <h1 class="h3 mb-3 text-gray-800">Patient Consultation List</h1>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Patient Seen</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
 
+                        <td>
+
+                        </td>
+                        <td>Not Yet</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Open Patient Consultation
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="container">
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" >
+                                        <div class="form-group">
+                                            <p>Patient Symptoms:</p>
+                                            <textarea class="form-control col-lg-12" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br/>
+                                            <p>Diagnosis:</p>
+                                            <textarea class="form-control col-lg-12" name="pdiagnosis" placeholder="Diagnosis" required></textarea><br/>
+                                            <p>Prescription:</p>
+                                            <textarea class="form-control col-lg-12" name="pmeds" placeholder="Prescription" required></textarea><br/>
+                                            <p>Patient Next Visit:</p>
+                                            <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required/><br/>
+                                            <button type="submit" class="btn btn-facebook">Submit</button>
+                                            <button name="labsend" class="btn btn-success">Send to Laboratory</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
