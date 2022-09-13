@@ -165,9 +165,12 @@
                         <tbody>
                         ';
                         while ($row = mysqli_fetch_array($result)) {
+                            $pat_id = $row['patient_id'];
+                            $pat_name = $row['patient_name'];
+
                             echo '<tr>';
-                            echo '<td>' . $row['patient_id'] . '</td>';
-                            echo '<td>' . $row['patient_name'] . '</td>';
+                            echo '<td>' . $pat_id . '</td>';
+                            echo '<td>' . $pat_name . '</td>';
                             echo '<td>' . $row['policy_number'] . '</td>';
                             echo ' <td>
                             <!-- Button trigger modal -->
@@ -198,12 +201,16 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="" method="">
+                                <form action="sendtodoc.php" method="post">
                                     <div class="form-group">
-                                        <input type="number" class="form-control col-lg-10" name="pweight" placeholder="Patient Weight" required /><br />
-                                        <input type="number" class="form-control col-lg-10" name="pheight" placeholder="Patient Height" required /><br />
-                                        <input type="text" class="form-control col-lg-10" name="bloodpressure" placeholder="Blood Pressure" required /><br />
-                                        <input type="number" class="form-control col-lg-10" name="temperature" placeholder="Patient Temperature" required /><br />
+                                        <?php include 'dbconnection.php';
+                                        echo $pat_name ?><br />
+                                        <input type="hidden" class="form-control col-lg-10" id="pid" name="pid" placeholder="Patient Weight" value=<?php echo $pat_id ?> />
+                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value=<?php echo $pat_name ?> />
+                                        <input type="number" class="form-control col-lg-10" id="pweight" name="pweight" placeholder="Patient Weight" required /><br />
+                                        <input type="number" class="form-control col-lg-10" id="pheight" name="pheight" placeholder="Patient Height" required /><br />
+                                        <input type="text" class="form-control col-lg-10" id="bloodpressure" name="bloodpressure" placeholder="Blood Pressure" required /><br />
+                                        <input type="number" class="form-control col-lg-10" id="temperature" name="temperature" placeholder="Patient Temperature" required /><br />
                                         <p>Select Doctor:</p>
                                         <select class="form-control col-lg-10" name="doctors" id="doctors">
                                             <option value="smith">Smith</option>
