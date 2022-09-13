@@ -203,10 +203,60 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">Accounting</h1>
-
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Insurance Scheme</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Generate Patient Bill
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
             </div>
             <!-- /.container-fluid -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title " id="exampleModalLabel">Patient Consultation Fees</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" >
+                                <div class="form-group">
+                                    <p>Doctor Consultation Fees:</p>
+                                    <input type="text" class="form-control" name="docfee" maxlength="6"/><br/>
+                                    <p>General Checkup:</p>
+                                    <input type="text" class="form-control" name="gencheck" maxlength="5"/><br/>
+                                    <p>Prescription:</p>
+                                    <input type="text" class="form-control" name="presc" maxlength="6"/><br/>
+                                    <p>Laboratory Visit:</p>
+                                    <input type="text" class="form-control" name="labvis" maxlength="6"/><br/>
+                                    <button name="cashgen" class="btn btn-success">Generate Receipt</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
         <!-- End of Main Content -->
