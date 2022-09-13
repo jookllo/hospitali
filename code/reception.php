@@ -60,9 +60,7 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -149,11 +147,24 @@
                     <div class="container">
                         <form action="addtotriage.php" method="post">
                             <div class="form-group">
+                                <h5 class="text-gray-800">First Name:</h5>
                                 <input type="text" class="form-control col-lg-6" name="pname" placeholder="Input First Name" required /><br />
+                                <h5 class="text-gray-800">Last Name:</h5>
                                 <input type="text" class="form-control col-lg-6" name="lname" placeholder="Input Last Name" required /><br />
+                                <h5 class="text-gray-800">Date of Birth:</h5>
+                                <input type="date" class="form-control col-lg-6" name="dob" placeholder="Input Date of Birth" required /><br />
+                                <h5 class="text-gray-800">Insurance Scheme:</h5>
+                                <select class="form-control col-lg-6" name="insurancescheme">
+                                    <option value="nhif">N.H.I.F.</option>
+                                    <option value="jubilee">Jubilee Insurance</option>
+                                    <option value="allianz">Allianz Insurance</option>
+                                    <option value="apa">A.P.A. Insurance</option>
+                                </select><br />
+                                <h5 class="text-gray-800">Insurance Number:</h5>
                                 <input type="text" class="form-control col-lg-6" name="insurancenum" placeholder="Input Insurance Number" required /><br />
+                                <h5 class="text-gray-800">Phone Number:</h5>
                                 <input type="number" class="form-control col-lg-6" name="phnum" placeholder="Input Phone Number" required /><br />
-                                <button type="submit" class="btn btn-facebook">Submit</button>
+
                                 <button name="triagesend" type="Submit" class="btn btn-success">Send to Triage</button>
                             </div>
                         </form>
