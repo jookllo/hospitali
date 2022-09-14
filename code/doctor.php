@@ -407,6 +407,50 @@
                                                 </div>
                                             </div>
 
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title " id="exampleModalLabel">Lab Tests to Conduct</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" >
+                                        <div class="form-group">
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="bloodtest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Blood Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="stooltest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Stool Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="urinetest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Urine Sample Test
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="xraytest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    X-Ray Test
+                                                </label>
+                                            </div><br/>
+                                            <button type="labsend" class="btn btn-facebook">Send to Laboratory</button>
                                         </div>
 
                                     </div>
