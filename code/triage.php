@@ -207,10 +207,18 @@
                                     <div class="form-group">
                                         <?php echo $pat_name; ?>
                                         <input type="hidden" class="form-control col-lg-10" id="pid" name="pid" placeholder="Patient Weight" value=<?php echo $pat_id ?> />
+<<<<<<< HEAD
                                         <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value=<?php echo $pat_name ?> required />
+=======
+                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value=<?php echo $pat_name ?> />
+                                        <p>Patient Weight:</p>
+>>>>>>> 0150b6b36293f32a3a1cd952b258e2386c0bb100
                                         <input type="number" class="form-control col-lg-10" id="pweight" name="pweight" placeholder="Patient Weight" required /><br />
+                                        <p>Patient Height:</p>
                                         <input type="number" class="form-control col-lg-10" id="pheight" name="pheight" placeholder="Patient Height" required /><br />
+                                        <p>Blood Pressure:</p>
                                         <input type="text" class="form-control col-lg-10" id="bloodpressure" name="bloodpressure" placeholder="Blood Pressure" required /><br />
+                                        <p>Patient Temperature:</p>
                                         <input type="number" class="form-control col-lg-10" id="temperature" name="temperature" placeholder="Patient Temperature" required /><br />
                                         <p>Select Doctor:</p>
                                         <select class="form-control col-lg-10" name="doctors" id="doctors">
