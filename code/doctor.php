@@ -132,88 +132,53 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Profile</span>
                                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
                             </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
 
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-3 text-gray-800">Patient Consultation List</h1>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width:5%">#</th>
-                                <th scope="col">Name</th>
-
-                                <th scope="col" style="width:20%">Phone Number</th>
-
-                                <th scope="col" style="width:30%">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-
-
-                                <td>
-
-                                </td>
-
-                                <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                        Open Patient Consultation
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="container">
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title " id="exampleModalLabel">Patient Consultation</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <p>Patient Symptoms:</p>
-                                                <textarea class="form-control col-lg-12" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br />
-                                                <p>Diagnosis:</p>
-                                                <textarea class="form-control col-lg-12" name="pdiagnosis" placeholder="Diagnosis" required></textarea><br />
-                                                <p>Prescription:</p>
-                                                <textarea class="form-control col-lg-12" name="pmeds" placeholder="Prescription" required></textarea><br />
-                                                <p>Patient Next Visit:</p>
-                                                <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required /><br />
-                                                <button type="pharmsend" class="btn btn-facebook">Send to Pharmacy</button>
-                                                <button name="labsend" class="btn btn-success">Send to Lab</button>
-                                                <button name="billsend" class="btn btn-primary">Send to Billing</button>
-                                            </div>
-                                        </form>
-                                    </div>
 
                                 </div>
                             </div>
                         </div>
 
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title " id="exampleModalLabel">Lab Tests to Conduct</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" >
+                                        <div class="form-group">
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="bloodtest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                   Blood Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="stooltest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Stool Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="urinetest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Urine Sample Test
+                                                </label>
+                                            </div><br/>
+                                            <button type="labsend" class="btn btn-facebook">Send to Laboratory</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
