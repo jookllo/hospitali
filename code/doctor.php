@@ -258,6 +258,12 @@
                                                     Urine Sample Test
                                                 </label>
                                             </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="xraytest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    XRay Test
+                                                </label>
+                                            </div><br/>
                                             <button type="labsend" class="btn btn-facebook">Send to Laboratory</button>
                                         </div>
                                     </form>
