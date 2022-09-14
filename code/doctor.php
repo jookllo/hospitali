@@ -319,7 +319,10 @@
                         </div>
                     </li>
 
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
 
+                    </li>
 
                     </ul>
 
