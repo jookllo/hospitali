@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $sql);
 
     if ($result === TRUE) {
-        echo $patient_name; //header//("Location: TRIAGE.php");
+        header("Location: TRIAGE.php");
     } else {
-        echo  $patient_name; //("Error description: " . $conn->error);
+        echo ("Error description: " . $conn->error);
     }
 }

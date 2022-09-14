@@ -154,12 +154,12 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col" style="width:5%">#</th>
                                 <th scope="col">Name</th>
 
-                                <th scope="col">Phone Number</th>
+                                <th scope="col" style="width:20%">Phone Number</th>
 
-                                <th scope="col">Action</th>
+                                <th scope="col" style="width:30%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
