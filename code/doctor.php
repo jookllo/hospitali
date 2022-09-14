@@ -151,35 +151,47 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-3 text-gray-800">Patient Consultation List</h1>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col" style="width:5%">#</th>
-                                <th scope="col">Name</th>
+                    <?php
+                    include 'dbconnection.php';
+                    $sql = "Select * from vitals";
+                    $result = mysqli_query($conn, $sql);
+                    echo '<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:5%">#</th>
+                            <th scope="col" style="width:20%">Patient ID</th>
 
-                                <th scope="col" style="width:20%">Phone Number</th>
+                            <th scope="col">Name</th>
 
-                                <th scope="col" style="width:30%">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
+                            <th scope="col" style="width:30%">Action</th>
+                        </tr>
+                    </thead>';
+                    while ($row = mysqli_fetch_array($result)) {
+                        $i = 1;
+                        $pat_name = $row['patient_name'];
+                        $pat_id = $row['patient_id'];
+                        $pat_weight = $row['weight'];
+                        $pat_height = $row['height'];
+                        $pat_temp = $row['temperature'];
+                        $pat_bp = $row['blood_presssure'];
 
+                        echo '<tbody>';
+                        echo '<tr>';
+                        echo '<td>' . $i++ . '</td>';
+                        echo '<td>' . $pat_id . '</td>';
+                        echo '<td>' . $pat_name . '</td>';
+                        echo '<td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Open Patient Consultation
+                        </button>
+                    </td>';
+                        echo '</tr>';
+                        echo '</tbody>';
+                        echo '</table>';
+                    }
 
-                                <td>
+                    ?>
 
-                                </td>
-
-                                <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                        Open Patient Consultation
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                     <div class="container">
 
                         <!-- Modal -->
@@ -193,8 +205,40 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="">
+                                        <h5>Triage notes</h5>
+                                        <h6>Patient Name:
+                                            <?php
+                                            echo $pat_name
+                                            ?>
+                                        </h6>
+                                        <p>
+                                            Blood pressure:
+                                            <?php
+                                            echo $pat_bp
+                                            ?>
+
+                                            <span style="float:right;">Weight:
+                                                <?php
+                                                echo $pat_weight . " kg"
+                                                ?>
+                                            </span>
+                                        </p>
+                                        <p>Height:
+                                            <?php
+                                            echo $pat_height . " cm"
+                                            ?>
+
+                                            <span style="float:right">Captured temperature:
+                                                <?php
+                                                echo $pat_temp . " degrees celcius"
+                                                ?>
+                                            </span>
+                                        </p>
+                                        <h5>Doctor's notes</h5>
+                                        <form action="sendtobilling.php" method="post">
                                             <div class="form-group">
+                                                <input type="hidden" class="form-control col-lg-10" id="pid" name="pid" value="<?php echo $pat_id ?>" />
+                                                <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" value="<?php echo $pat_name ?>" />
                                                 <p>Patient Symptoms:</p>
                                                 <textarea class="form-control col-lg-12" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br />
                                                 <p>Diagnosis:</p>
@@ -205,7 +249,7 @@
                                                 <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required /><br />
                                                 <button type="pharmsend" class="btn btn-facebook">Send to Pharmacy</button>
                                                 <button name="labsend" class="btn btn-success">Send to Lab</button>
-                                                <button name="billsend" class="btn btn-primary">Send to Billing</button>
+                                                <button name="billsend" class="btn btn-primary" type="Submit">Send to Billing</button>
                                             </div>
                                         </form>
                                     </div>

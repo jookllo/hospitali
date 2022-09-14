@@ -171,7 +171,7 @@
 
                             echo '<tr>';
                             echo '<td>' . $pat_id . '</td>';
-                            echo '<td>' . "$pat_name" . '</td>';
+                            echo '<td>' . $pat_name . '</td>';
                             echo '<td>' . $patient_number . '</td>';
                             echo ' <td>
                             <!-- Button trigger modal -->
@@ -207,7 +207,7 @@
                                     <div class="form-group">
                                         <?php echo $pat_name; ?>
                                         <input type="hidden" class="form-control col-lg-10" id="pid" name="pid" placeholder="Patient Weight" value=<?php echo $pat_id ?> />
-                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value="<?php echo "" . $pat_name . "" ?>" />
+                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value="<?php echo $pat_name ?>" />
                                         <p>Patient Weight:</p>
                                         <input type="number" class="form-control col-lg-10" id="pweight" name="pweight" placeholder="Patient Weight" required /><br />
                                         <p>Patient Height:</p>
