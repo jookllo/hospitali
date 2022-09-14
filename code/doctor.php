@@ -254,67 +254,216 @@
                                         </form>
                                     </div>
 
+                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                    <li class="nav-item dropdown no-arrow d-sm-none">
+                                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search fa-fw"></i>
+                                        </a>
+                                        <!-- Dropdown - Messages -->
+                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                            <form class="form-inline mr-auto w-100 navbar-search">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for Patient" aria-label="Search" aria-describedby="basic-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="button">
+                                                            <i class="fas fa-search fa-sm"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+
+
+
+
+                                    <!-- Nav Item - User Information -->
+                                    <li class="nav-item dropdown no-arrow">
+                                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Profile</span>
+                                            <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
+                                        </a>
+                                        <!-- Dropdown - User Information -->
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Logout
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    </ul>
+
+                                    </nav>
+                                    <!-- End of Topbar -->
+
+                                    <!-- Begin Page Content -->
+                                    <div class="container-fluid">
+
+                                        <!-- Page Heading -->
+                                        <h1 class="h3 mb-3 text-gray-800">Patient Consultation List</h1>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">First Name</th>
+                                                    <th scope="col">Last Name</th>
+                                                    <th scope="col">Phone Number</th>
+                                                    <th scope="col">Patient Seen</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"></th>
+                                                    <td></td>
+                                                    <td></td>
+
+                                                    <td>
+
+                                                    </td>
+                                                    <td>Not Yet</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                            Open Patient Consultation
+                                                        </button>
+                                                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Lab Test to Conduct</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="container">
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title " id="exampleModalLabel">Patient Consultation</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="">
+                                                                <div class="form-group">
+                                                                    <p>Patient Symptoms:</p>
+                                                                    <textarea class="form-control col-lg-12" name="psymptoms" placeholder="Patient Symptoms" required></textarea><br />
+                                                                    <p>Diagnosis:</p>
+                                                                    <textarea class="form-control col-lg-12" name="pdiagnosis" placeholder="Diagnosis" required></textarea><br />
+                                                                    <p>Prescription:</p>
+                                                                    <textarea class="form-control col-lg-12" name="pmeds" placeholder="Prescription" required></textarea><br />
+                                                                    <p>Patient Next Visit:</p>
+                                                                    <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required /><br />
+                                                                    <button type="pharmsend" class="btn btn-facebook">Send to Pharmacy</button>
+
+                                                                    <button name="billsend" class="btn btn-primary">Send to Billing</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title " id="exampleModalLabel">Lab Tests to Conduct</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="">
+                                                                <div class="form-group">
+
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="bloodtest" id="flexCheckDefault">
+                                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                                            Blood Tests
+                                                                        </label>
+                                                                    </div><br />
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="stooltest" id="flexCheckDefault">
+                                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                                            Stool Tests
+                                                                        </label>
+                                                                    </div><br />
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="urinetest" id="flexCheckDefault">
+                                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                                            Urine Sample Test
+                                                                        </label>
+                                                                    </div><br />
+                                                                    <button type="labsend" class="btn btn-facebook">Send to Laboratory</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- /.container-fluid -->
+
+                                </div>
+                                <!-- End of Main Content -->
+
+                                <!-- Footer -->
+                                <footer class="sticky-footer bg-white">
+                                    <div class="container my-auto">
+                                        <div class="copyright text-center my-auto">
+                                            <span>Copyright &copy; Hospital 2022</span>
+                                        </div>
+                                    </div>
+                                </footer>
+                                <!-- End of Footer -->
+
+                            </div>
+                            <!-- End of Content Wrapper -->
+
+                        </div>
+                        <!-- End of Page Wrapper -->
+
+                        <!-- Scroll to Top Button-->
+                        <a class="scroll-to-top rounded" href="#page-top">
+                            <i class="fas fa-angle-up"></i>
+                        </a>
+
+                        <!-- Logout Modal-->
+                        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                        <a class="btn btn-primary" href="login.php">Logout</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
+                        <!-- Bootstrap core JavaScript-->
+                        <script src="../vendor/jquery/jquery.min.js"></script>
+                        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                </div>
-                <!-- /.container-fluid -->
+                        <!-- Core plugin JavaScript-->
+                        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Hospital 2022</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="../js/sb-admin-2.min.js"></script>
+                        <!-- Custom scripts for all pages-->
+                        <script src="../js/sb-admin-2.min.js"></script>
 
 </body>
 
