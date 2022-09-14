@@ -187,6 +187,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                 Open Patient Consultation
                             </button>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Lab Test to Conduct</button>
                         </td>
                     </tr>
                     </tbody>
@@ -215,8 +216,49 @@
                                             <p>Patient Next Visit:</p>
                                             <input type="date" class="form-control col-lg-12" name="pdate" placeholder="Next Visit" required/><br/>
                                             <button type="pharmsend" class="btn btn-facebook">Send to Pharmacy</button>
-                                            <button name="labsend" class="btn btn-success">Send to Lab</button>
+
                                             <button name="billsend" class="btn btn-primary">Send to Billing</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title " id="exampleModalLabel">Lab Tests to Conduct</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" >
+                                        <div class="form-group">
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="bloodtest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                   Blood Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="stooltest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Stool Tests
+                                                </label>
+                                            </div><br/>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="urinetest" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Urine Sample Test
+                                                </label>
+                                            </div><br/>
+                                            <button type="labsend" class="btn btn-facebook">Send to Laboratory</button>
                                         </div>
                                     </form>
                                 </div>
