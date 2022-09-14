@@ -167,11 +167,12 @@
                         while ($row = mysqli_fetch_array($result)) {
                             $pat_id = $row['patient_id'];
                             $pat_name = $row['patient_name'];
+                            $patient_number = $row['policy_number'];
 
                             echo '<tr>';
                             echo '<td>' . $pat_id . '</td>';
-                            echo '<td>' . $pat_name . '</td>';
-                            echo '<td>' . $row['policy_number'] . '</td>';
+                            echo '<td>' . "$pat_name" . '</td>';
+                            echo '<td>' . $patient_number . '</td>';
                             echo ' <td>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -182,6 +183,7 @@
                         }
                         echo '</tbody>';
                         echo '</table>';
+
 
                         ?>
 
@@ -203,10 +205,9 @@
                             <div class="modal-body">
                                 <form action="sendtodoc.php" method="post">
                                     <div class="form-group">
-                                        <?php include 'dbconnection.php';
-                                        echo $pat_name ?><br />
+                                        <?php echo $pat_name; ?>
                                         <input type="hidden" class="form-control col-lg-10" id="pid" name="pid" placeholder="Patient Weight" value=<?php echo $pat_id ?> />
-                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value=<?php echo $pat_name ?> />
+                                        <input type="hidden" class="form-control col-lg-10" id="pname" name="pname" placeholder="Patient Weight" value="<?php echo "" . $pat_name . "" ?>" />
                                         <p>Patient Weight:</p>
                                         <input type="number" class="form-control col-lg-10" id="pweight" name="pweight" placeholder="Patient Weight" required /><br />
                                         <p>Patient Height:</p>
