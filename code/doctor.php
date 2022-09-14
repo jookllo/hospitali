@@ -184,7 +184,7 @@
                         </td>
                         <td>Not Yet</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                 Open Patient Consultation
                             </button>
                             <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Lab Test to Conduct</button>
